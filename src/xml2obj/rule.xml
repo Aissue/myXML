@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<digester-rules>
+    <object-create-rule pattern="viewcache" classname="entity.ViewCache" />
+    <pattern value="viewcache/areas/area">
+        <object-create-rule classname="entity.Area" />
+        <bean-property-setter-rule pattern="id" propertyname="id" />
+        <bean-property-setter-rule pattern="areaType" propertyname="areaType" />
+        <bean-property-setter-rule pattern="parentId" propertyname="parentId" />
+        <bean-property-setter-rule pattern="name" propertyname="name" />
+        <bean-property-setter-rule pattern="ordering" propertyname="ordering" />
+        <bean-property-setter-rule pattern="phoneArea" propertyname="phoneArea" />
+        <set-next-rule methodname="addArea" />
+    </pattern>
+</digester-rules>
