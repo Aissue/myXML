@@ -47,6 +47,16 @@ public class freemarkerTest {
     }
 
     /**
+     * 测试jvm参数获取，若取不到返回null
+     * -Dtest=abcde
+     */
+    @Test
+    public void test2(){
+        String jvmIndex = System.getProperty("test");
+        System.out.println("==" + jvmIndex);
+    }
+
+    /**
      * 转换方法
      * @param tmpFile 规则文件名可以全路径
      * @param object  转换对象
